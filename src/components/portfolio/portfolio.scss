@@ -1,0 +1,139 @@
+@import "../../global.scss";
+
+.portfolio {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-size: 50px;
+
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+
+  ul {
+    margin: 10px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+
+    @include mobile {
+      margin: 10px 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  .container {
+    width: 80%;
+    height: 590px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include mobile {
+      width: 50%;
+    }
+
+    .icon1 {
+      width: 200px;
+      color: #000;      
+    }
+
+    .icon2 {
+      padding: 2px;
+      width: 450px;
+      color: #000;
+      font-size: 50px;
+      position: absolute;
+      margin-left: -230px;
+      margin-top: -330px;
+    }
+
+    @media screen and (max-width: 780px) {  
+      .icon2 {
+        padding: 0px;
+        width: 480px;
+        color: #000;
+        font-size: 30px;
+        position: absolute;
+        margin-left: -230px;
+        margin-top: -90px;
+      }
+    }
+
+    .titolo {
+      position: absolute;
+      margin-top: 10%;
+      margin-left: 5%;
+      text-align: center;
+      font-size: 10px;
+      color: rgb(0, 255, 242);
+      font-weight: bold;
+      text-shadow: 0 3px 0 rgb(121, 116, 116), 0 1px 0 #c9c9c9, 0 1px 0 #bbb,
+        0 1px 0 #b9b9b9, 0 1px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1),
+        0 0 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3),
+        0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .titolo2 {
+      position: absolute;
+      margin-top: 30%;
+      margin-left: 5%;
+      text-align: center;
+      font-size: 10px;
+      color: rgb(0, 255, 242);
+      font-weight: bold;
+      text-shadow: 0 3px 0 rgb(121, 116, 116), 0 1px 0 #c9c9c9, 0 1px 0 #bbb,
+        0 1px 0 #b9b9b9, 0 1px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1),
+        0 0 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3),
+        0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .item {
+      width: 570px;
+      height: 320px;
+      border-radius: 20px;
+      border: 1px solid rgb(240, 239, 239);
+      margin: 10px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      position: relative;
+      transition: all 0.5s ease;
+      cursor: pointer;
+
+      @include mobile {
+        width: 130px;
+        height: 100px;
+      }
+
+      h3 {
+        position: absolute;
+        font-size: 30px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+      }
+
+      &:hover {
+        background-color: $mainColor;
+        img {
+          opacity: 0.2;
+          z-index: 0;
+        }
+      }
+    }
+  }
+}

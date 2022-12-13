@@ -1,0 +1,209 @@
+@import "../../global.scss";
+
+.img{
+  width: 100%;
+}
+
+@media screen and (max-width: 780px) {
+  .img{
+    width: 100%;
+    height: 10vh;
+  }
+}
+
+.titolo {
+  position: absolute;
+  margin-top: 1%;
+  margin-left: 8%;
+  text-align: center;
+  font-size: 35px;
+  color: rgb(0, 255, 242);
+  font-weight: bold;
+  text-shadow: 0 3px 0 rgb(121, 116, 116), 0 1px 0 #c9c9c9, 0 1px 0 #bbb,
+    0 1px 0 #b9b9b9, 0 1px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1),
+    0 0 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3),
+    0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width: 780px){
+  .img{
+    width: 100%;
+    height: 25vh;
+  }
+  .titolo {
+    position: absolute;
+    margin-top: 2%;
+    margin-left: 5%;
+    text-align: center;
+    font-size: 10px;
+    color: rgb(0, 255, 242);
+    font-weight: bold;
+    text-shadow: 0 3px 0 rgb(121, 116, 116), 0 1px 0 #c9c9c9, 0 1px 0 #bbb,
+      0 1px 0 #b9b9b9, 0 1px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1),
+      0 0 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3),
+      0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25),
+      0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.15);
+  }
+}
+  
+
+.intro {
+  display: table;
+  width: 100%;
+  height: 100vh;
+  padding: 135px 0;
+  color: white;
+  background: url("./t2.png") no-repeat bottom center scroll;
+  background-position: 30% 45%;
+  background-size: cover;
+  margin-top: 50px;
+  display: flex;
+
+  @include mobile {
+    display: table;
+    width: 100%;
+    height: 100vh;
+    padding: 5px 0;
+    color: white;
+    background: url(t2.png) no-repeat bottom center scroll;
+    background-position: 0% 15%;
+    background-size: cover;
+    margin-top: 50px;
+    display: flex;
+  }
+
+  h1 {
+    font-size: 30px;
+    margin: 10px 0;
+    margin-top: -120px;
+
+    @include mobile {
+      font-size: 20px;
+      margin-top: 80px;
+    }
+  }
+  h2 {
+    font-size: 15px;
+    margin-top: -100px;
+    margin-right: 15px;
+    margin-left: 7%;
+    @include mobile {
+      font-size: 5px;
+      margin-top: -90px;
+      margin-right: 15px;
+      margin-left: -150px;
+    }
+  }
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-top: -45px;
+    margin-left: -180px;
+
+    @include mobile {
+      font-size: 20px;
+      margin-left: -20px;
+      margin-top: 0;
+    }
+  }
+
+  .left {
+    flex: 0.5;
+    overflow: hidden;
+
+    .imgContainer {
+      width: 620px;
+      height: 620px;
+      background-color: crimson;
+      border-radius: 50%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      float: right;
+
+      @include mobile {
+        align-items: flex-start;
+      }
+
+      img {
+        height: 90%;
+
+        @include mobile {
+          height: 50%;
+        }
+      }
+    }
+  }
+
+  .img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .right {
+    flex: 0.5;
+    position: relative;
+
+    .wrapper {
+      width: 100%;
+      height: 100%;
+      padding-left: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include mobile {
+        padding-left: 0;
+        align-items: center;
+      }
+      h3 {
+        font-size: 30px;
+
+        @include mobile {
+          font-size: 20px;
+        }
+
+        span {
+          font-size: inherit;
+          color: crimson;
+        }
+
+        .ityped-cursor {
+          animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+          50% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+          }
+        }
+      }
+    }
+
+    a {
+      position: absolute;
+      bottom: 10px;
+      left: 40%;
+
+      img {
+        width: 30px;
+        animation: arrowBlink 2s infinite;
+      }
+
+      @keyframes arrowBlink {
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
