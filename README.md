@@ -20,7 +20,7 @@
 ## 🔥 Instalação e execução
 
 1. Faça um clone desse repositório;
-2. Entre na pasta `cd Potífolio`;
+2. Entre na pasta `cd Potfolio`;
 5. Rode `yarn init -y` e depois `yarn install` para rodar a aplicação;
 6. Rode `yarn start`;
 7. Acesse a URL `http://localhost:3000`;
@@ -28,7 +28,10 @@
 ## Como mostrar log da aplicação?
 
 ```
-Esse projeto foi criado com todo amor e carinho, por ta trabalhando com o que mais gosto que é, desenvolvimento.
+Esse projeto foi criado com todo amor e carinho, 
+por ta trabalhando com o que mais gosto de fazer que é, 
+desenvolvimento.
+
 ```
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
